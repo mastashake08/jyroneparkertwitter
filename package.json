@@ -1,0 +1,14 @@
+{
+  "name": "jyroneparkerblog",
+  "version": "1.0.0",
+  "description": "Finds users to connect to then points them to my blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mastashake08",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
