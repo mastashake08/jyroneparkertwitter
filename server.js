@@ -3,9 +3,9 @@ var Twit = require('twit')
 var T = new Twit({
   consumer_key:         'sT4YaweyRxy6GFHEdJ2Q1PD39',
   consumer_secret:      'O9ZmPXKjV6D289mTUs839X4smQBSpz4Ya34WQqjdNVEfU213bb',
-  access_token:         '3129675625-jnfBjo0Aa01U6gy7IlLnGU0C6dGPt3eolZdVLBg',
-  access_token_secret:  'SxNIthkIWCtwj2JlIqV2LlGpdZuLnGdWnrsaYRzI3yRUZ',
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  access_token:         '3129675625-d3rV8fHDPJkwn7Hn8pVRNta6eCbdFpvd0tOYdIs',
+  access_token_secret:  'ib2hxMSqwvJXNPXzjue64H5B3xZriDpzRQrQHWkEH09YF',
+  //timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
 
 var stream = T.stream('user')
