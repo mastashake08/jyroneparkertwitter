@@ -21,7 +21,7 @@ stream.on('message', function (event) {
  switch(event.event){
 case 'follow':
 
-  T.post('direct_messages/new',{screen_name:user.screen_name, text:"Thank you for the follow! I teach coding for free at my website https://jyroneparker.com I also do live streams subscribe on Youtube https://www.youtube.com/channel/UCFDt6Z1zxEF0f_aY0i6Bcfg"}, function (err, data, response) {
+  T.post('direct_messages/new',{screen_name:user.screen_name, text:"Thank you for the follow! I teach coding for free at my website https://jyroneparker.com I also do live streams subscribe on Youtube https://www.youtube.com/channel/UCFDt6Z1zxEF0f_aY0i6Bcfg lastly I own a startup called Treat Me At Home sign up today and make money part-time and full-time https://treatmeathome.online"}, function (err, data, response) {
 
 })
 break;
