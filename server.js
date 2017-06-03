@@ -1,10 +1,10 @@
 var Twit = require('twit')
 
 var T = new Twit({
-  consumer_key:         'hCj9YbSEyaO2RidupBka1VEmJ',
-  consumer_secret:      'K1SlDkSXMH7V7K6YNzfxSFOeh83JmRLHer4nDX4EaKBJiZri0p',
-  access_token:         '3129675625-zkhS7fgfJHYhgSpE8YwlVYwuo9gM2DbdVKz6zGi',
-  access_token_secret:  'goUl0XNPAK8aY7G1xS0Aqf4t9lmK5N9Hg8dE9jXpjZHPT',
+  consumer_key:         'rwNT8jL5lTSgyWSeabdP06AXr',
+  consumer_secret:      'pQrFddFetWugzvCSRc0iG2wAXaH7m6L8C5qoO7iSLlsczsFgJP',
+  access_token:         '3129675625-KK9Rgz8oXwCgxmXZ7sKbiFwqlMGZ4vDzHQD7FKz',
+  access_token_secret:  'iii9wD969ipC2jDCXAUIIpU11IpaGxGmBlafgkHmayHVH',
   //timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
 var statusArray = [
@@ -56,7 +56,7 @@ statuses.on('tweet', function (tweet) {
     console.log(data);
   });
 
-
+/*
 var nameID = tweet.id_str;
 
 var name = tweet.user.screen_name;
@@ -64,5 +64,5 @@ var name = tweet.user.screen_name;
 T.post('statuses/update', {in_reply_to_status_id: nameID, status: '@' + name + '  '+statusArray[Math.floor(Math.random()*statusArray.length)]}, function(err, data, response) {
   console.log(data);
 });
-
+*/
 })
