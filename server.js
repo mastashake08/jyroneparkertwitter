@@ -3,8 +3,8 @@ var Twit = require('twit')
 var T = new Twit({
   consumer_key:         'hCj9YbSEyaO2RidupBka1VEmJ',
   consumer_secret:      'K1SlDkSXMH7V7K6YNzfxSFOeh83JmRLHer4nDX4EaKBJiZri0p',
-  access_token:         '3129675625-lXEFMO6oKkQtC5lCVBiP4TEPsCX9TgMePDroiTe',
-  access_token_secret:  's3CbeXYMUQWymRsPK6q2rewBT1FzhdaWX1Rw8Rwb9XruV',
+  access_token:         '3129675625-zkhS7fgfJHYhgSpE8YwlVYwuo9gM2DbdVKz6zGi',
+  access_token_secret:  'goUl0XNPAK8aY7G1xS0Aqf4t9lmK5N9Hg8dE9jXpjZHPT',
   //timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
 var statusArray = [
@@ -48,7 +48,7 @@ break;
  }}
 })
 var statuses = T.stream('statuses/filter', { track: 'tutor,massage,nails,hair,stylist,fitness trainer, fitness training, private lessons, private sessions, cooking lessons, private chef, car repairman' })
-
+console.log(statuses);
 statuses.on('tweet', function (tweet) {
   console.log(tweet)
   //T.post('friendships/create',{screen_name:tweet.user.screen_name,follow:true}, function(err,data,response){});
