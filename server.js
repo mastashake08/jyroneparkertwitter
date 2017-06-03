@@ -47,7 +47,7 @@ default:
 break;
  }}
 })
-var statuses = T.stream('statuses/filter', { track: 'tutor' })
+var statuses = T.stream('statuses/filter', { track: 'tutor,massage,nails,hair,stylist,fitness trainer, fitness training, private lessons, private sessions, cooking lessons, private chef, car repairman' })
 
 statuses.on('tweet', function (tweet) {
   console.log(tweet)
