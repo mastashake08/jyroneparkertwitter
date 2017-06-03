@@ -7,6 +7,14 @@ var T = new Twit({
   access_token_secret:  's3CbeXYMUQWymRsPK6q2rewBT1FzhdaWX1Rw8Rwb9XruV',
   //timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
+var statusArray = [
+'Check out my new web app #TreatMeAtHome sign up and make money as a service provider it is free treatmeathome.online',
+'Want to work on your own time doing what you are good at? Sign up as a service provider for #TreatMeAtHome treatmeathome.online',
+'I need service providers to join my new startup #TreatMeAtHome it is free and you can earn money on your time treatmeathome.online',
+'Make some extra $$ doing work you want to do? Sign up for my start up #TreatMeAtHome it is free treatmeathome.online',
+'Support my startup #TreatMeAtHome featured in the #TNW2017 Boost program. It is free to sign up treatmeathome.online'
+
+];
 
 var stream = T.stream('user')
 
@@ -39,19 +47,22 @@ default:
 break;
  }}
 })
-var statuses = T.stream('statuses/filter', { track: 'webdev, laravel, mobile apps, nodejs, #blackpower,saas,hair dresser, nails,tutoring,babysitting, chef, massage, artist' })
+var statuses = T.stream('statuses/filter', { track: 'tutor' })
 
 statuses.on('tweet', function (tweet) {
   console.log(tweet)
-  T.post('friendships/create',{screen_name:tweet.user.screen_name,follow:true}, function(err,data,response){});
+  //T.post('friendships/create',{screen_name:tweet.user.screen_name,follow:true}, function(err,data,response){});
   T.post('favorites/create',{id:tweet.id},function(err,data,response){
     console.log(data);
   });
-/*
-  var nameID = tweet.id_str;
+
+
+var nameID = tweet.id_str;
 
 var name = tweet.user.screen_name;
 
-T.post('statuses/update', {in_reply_to_status_id: nameID, status: '@' + name + ' check out my new web app #TreatMeAtHome sign up and make money as a service provider!'}, function(err, data, response) {});
-*/
+T.post('statuses/update', {in_reply_to_status_id: nameID, status: '@' + name + '  '+statusArray[Math.floor(Math.random()*statusArray.length)]}, function(err, data, response) {
+  console.log(data);
+});
+
 })
