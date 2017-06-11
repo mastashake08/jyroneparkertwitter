@@ -1,12 +1,13 @@
 var Twit = require('twit')
 
 var T = new Twit({
-  consumer_key:         'rwNT8jL5lTSgyWSeabdP06AXr',
-  consumer_secret:      'pQrFddFetWugzvCSRc0iG2wAXaH7m6L8C5qoO7iSLlsczsFgJP',
-  access_token:         '3129675625-KK9Rgz8oXwCgxmXZ7sKbiFwqlMGZ4vDzHQD7FKz',
-  access_token_secret:  'iii9wD969ipC2jDCXAUIIpU11IpaGxGmBlafgkHmayHVH',
+  consumer_key:         'VViqlRsgG601PJAGhYQYr7pf4',
+  consumer_secret:      'I6ovM7zLPKahPRkSMsxCETCW35vLVUthen45soz0JBmrYPd5NQ',
+  access_token:         '3129675625-xYUHhDbijGpgMBuR1b7toLjzWJ8wVDkDOdUqES8',
+  access_token_secret:  'NALYKWMfMVtYfsCxcmjyJSDonaQyg4LwB3wgpQ7gtGH4G',
   //timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 });
+
 var statusArray = [
 'Check out my new web app #TreatMeAtHome sign up and make money as a service provider it is free treatmeathome.online',
 'Want to work on your own time doing what you are good at? Sign up as a service provider for #TreatMeAtHome treatmeathome.online',
