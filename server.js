@@ -15,7 +15,7 @@ var statusArray = [
 'Support my startup #TreatMeAtHome featured in the #TNW2017 Boost program. It is free to sign up treatmeathome.online'
 
 ];
-
+var usa = ['-124.8','25.01','-64.42','48.75'];
 var stream = T.stream('user')
 
 stream.on('message', function (event) {
@@ -34,12 +34,12 @@ case 'follow':
 })
 break;
 case 'favorited':
-T.post('friendships/create',{screen_name:user.screen_name,follow:true}, function(err,data,response){
+//T.post('friendships/create',{screen_name:user.screen_name,follow:true}, function(err,data,response){
 
 });
 break;
 case 'list_member_added':
-T.post('friendships/create',{screen_name:user.screen_name,follow:true}, function(err,data,response){
+//T.post('friendships/create',{screen_name:user.screen_name,follow:true}, function(err,data,response){
 
 });
 break;
@@ -47,7 +47,7 @@ default:
 break;
  }}
 })
-var statuses = T.stream('statuses/filter', { track: 'tutor,massage,nails done,hair stylist,hair barber,fitness trainer, fitness training, private lessons, private sessions, cooking lessons, private chef, car repairman' })
+var statuses = T.stream('statuses/filter', { locations:usa,track: 'technology, startups, on demand economy, laravel, web development, mobile development, game development, reactjs, vuejs, php, javascript, linux, command line, ubuntu, software engineering ' })
 console.log(statuses);
 statuses.on('tweet', function (tweet) {
   console.log(tweet)
