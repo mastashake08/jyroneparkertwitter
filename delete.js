@@ -15,7 +15,7 @@ T.get('followers/ids',  function (err, data, response) {
   //
   //console.log(followers);
 })
-*/
+
 T.get('friends/ids', function(err,data,response){
   var following = data.ids;
     //console.log(following);
@@ -23,10 +23,22 @@ T.get('friends/ids', function(err,data,response){
     for( var j=0; j<following.length; j++){
       console.log(following[j]);
     T.post('friendships/destroy',{user_id: following[j]},function(err,data,response){
-      
+
       console.log(data);
     })
 
   }
 
 })
+*/
+
+T.get('favorites/list',{screen_name:'mastashake08',count:200},function(err,data,response){
+  var statuses = data;
+  //console.log(statuses);
+  for(var i=0; i < statuses.length; ++i){
+    console.log(statuses[i].id);
+    T.post('favorites/destroy',{id:statuses[i].id},function(err,data,response){
+
+    })
+  }
+});
